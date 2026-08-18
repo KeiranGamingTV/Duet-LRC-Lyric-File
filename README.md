@@ -13,6 +13,7 @@ Standard LRC files are excellent for basic time-synchronized lyrics, but they in
 - **Strict Predictability:** Every line follows a strict layout constraint, making parsing simple and deterministic.
 - **Minimalist Syntax:** Keeps file sizes lightweight, clean, and highly human-readable.
 - **Familiar Foundation:** Standard metadata fields are preserved, so legacy parsers can still extract song information.
+- **Color Coding:** Optional metadata tags to color-code lines.
 
 ---
 
@@ -22,6 +23,38 @@ To ensure a .dlrc file parses perfectly, the format enforces the following stric
 2. **Mandatory Singer Notation:** Every lyric line must explicitly include either `{1}`, `{2`, or `{B}` immediately following the timestamp.
 3. **No Multi-Timestamp Lines:** One lyric line cannot contain multiple timestamps (word-by-word mid-line syncing or repeating time tags on the same line are not supported).
 4. **Metadata Support:** All standard metadata lines from traditional .lrc files (such as `[ar:]`, `[al:]`, `[ti:]`, and `[offset:]`) remain fully supported at the head of the file.
+5. **Color Coding:** Color notations are NOT required, but if no color notations are present for the singer's line, the lyrics will use the app's default color for the singer's respective column. 
+
+---
+
+# 🆕 Color Coding Notation
+Color notations are NOT required, but if no color notations are present for the singer's line, the lyrics will use the app's default color for the singer's respective column. Colors can be pre-assigned at the start of the file in the metadata tags with a HEX code and a color name like so:
+
+- `[#000DFF: blue]`
+- `[#FF0000: red]`
+- `[#00FF00: lime]`
+
+Assigning colors in the metadata tags is not required, but is recommended for readability and ease-of-use. The line-level notation will now become:
+- `[mm:ss.xx]{singer column}<color name> Singer line`
+- `[mm:ss.xx]{singer column}<HEX code> Singer line`
+
+With this new color-coding feature, a DLRC file with color-notation would look something like this:
+
+```
+[ti: Song Title]
+[ar: Song Artist]
+[al: Album Title]
+[length: 3:35]
+- [#000DFF: blue]
+- [#FF0000: red]
+- [#00FF00: lime]
+
+[00:10.15]{1}<blue> Singer 1 sings this line, and it's colored blue.
+[00:15.40]{2}<red> Singer 2 sings this line, and it's colored red.
+[00:20.80]{B}<lime> Both singers sing this line, and it's colored lime.
+[00:23.76]{1}<#FF8000> Singer 3 sings this line in the left column, and it's colored orange.
+[00:28.12]{2} Singer 4 sings this line in the right column, and it is the default assigned color for the right column.
+```
 
 ---
 
