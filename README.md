@@ -45,9 +45,9 @@ With this new color-coding feature, a DLRC file with color-notation would look s
 [ar: Song Artist]
 [al: Album Title]
 [length: 3:35]
-- [#000DFF: blue]
-- [#FF0000: red]
-- [#00FF00: lime]
+[#000DFF: blue]
+[#FF0000: red]
+[#00FF00: lime]
 
 [00:10.15]{1}<blue> Singer 1 sings this line, and it's colored blue.
 [00:15.40]{2}<red> Singer 2 sings this line, and it's colored red.
