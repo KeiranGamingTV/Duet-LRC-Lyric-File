@@ -85,5 +85,5 @@ To assign a line of lyrics, place the singer token bracket immediately following
 # Project Roadmap & Implementation Status
 - **Specification Guidelines:** Complete and frozen for community evaluation.
 - **App Implementation:** Successfully integrated into a custom, private offline music player app to prove parsing accuracy and operational proof of concept.
-- **Upcoming Features:** I am planning to expand support to include distinct color coding identifiers soon to natively support tracks with more than two singers.
+- **Upcoming Features:** None planned at the moment.
 - **Parser/Reference Tooling:** In Development. I am currently looking for contributors to help build standalone open-source parser libraries in languages like JavaScript/TypeScript, Python, and Rust based on these strict guidelines.
