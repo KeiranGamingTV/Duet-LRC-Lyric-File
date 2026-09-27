@@ -28,11 +28,11 @@ To ensure a .dlrc file parses perfectly, the format enforces the following stric
 ---
 
 # 🆕 Color Coding Notation
-Color notations are NOT required, but if no color notations are present for the singer's line, the lyrics will use the app's default color for the singer's respective column. Colors can be pre-assigned at the start of the file in the metadata tags with a HEX code and a color name like so:
+Color notations are NOT required, but if no color notations are present for the singer's line, the lyrics will use the app's default color for the singer's respective column. Colors can be pre-assigned at the start of the file in the metadata tags with a HEX code and a color/artist name like so:
 
-- `[#000DFF: blue]`
-- `[#FF0000: red]`
-- `[#00FF00: lime]`
+- `- [#000DFF: blue]`
+- `- [#FF0000: red]`
+- `- [#00FF00: lime]`
 
 Assigning colors in the metadata tags is not required, but is recommended for readability and ease-of-use. The line-level notation will now become:
 - `[mm:ss.xx]{singer column}<color name> Singer line`
@@ -45,9 +45,9 @@ With this new color-coding feature, a DLRC file with color-notation would look s
 [ar: Song Artist]
 [al: Album Title]
 [length: 3:35]
-[#000DFF: blue]
-[#FF0000: red]
-[#00FF00: lime]
+- [#000DFF: blue]
+- [#FF0000: red]
+- [#00FF00: lime]
 
 [00:10.15]{1}<blue> Singer 1 sings this line, and it's colored blue.
 [00:15.40]{2}<red> Singer 2 sings this line, and it's colored red.
