@@ -20,7 +20,7 @@ Standard LRC files are excellent for basic time-synchronized lyrics, but they in
 # Core Guidelines & Rules
 To ensure a .dlrc file parses perfectly, the format enforces the following strict rules:
 1. **Mandatory Timestamps:** Every lyric line requires exactly one timestamp, just like a normal synced .lrc file.
-2. **Mandatory Singer Notation:** Every lyric line must explicitly include either `{1}`, `{2`, or `{B}` immediately following the timestamp.
+2. **Mandatory Singer Notation:** Every lyric line must explicitly include either `{1}`, `{2}`, or `{B}` immediately following the timestamp. `{1}` is used to notate the left column. `{2}` is used to notate the right column. `{B}` is used to notate the center/middle column.
 3. **No Multi-Timestamp Lines:** One lyric line cannot contain multiple timestamps (word-by-word mid-line syncing or repeating time tags on the same line are not supported).
 4. **Metadata Support:** All standard metadata lines from traditional .lrc files (such as `[ar:]`, `[al:]`, `[ti:]`, and `[offset:]`) remain fully supported at the head of the file.
 5. **Color Coding:** Color notations are NOT required, but if no color notations are present for the singer's line, the lyrics will use the app's default color for the singer's respective column. 
